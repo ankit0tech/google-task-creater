@@ -32,7 +32,7 @@ if os.environ.get('DEBUG_VALUE') == 'True':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://todo-google-api.herokuapp.com/']
 
 
 # Application definition
