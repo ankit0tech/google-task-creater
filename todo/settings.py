@@ -26,13 +26,13 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+
 if os.environ.get('DEBUG_VALUE') == 'True':
     DEBUG = True
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://todo-google-api.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'todo-google-api.herokuapp.com']
 
 
 # Application definition
