@@ -2,17 +2,25 @@
 
 {% block content %}
 
-<h1>My Google OAuth Project </h1>
-{% if user.is_authenticated %}
-<p>Welcome, You are logged in as {{ user.username }}</p>
-<a class="btn btn-primary" href="{% url 'tasks:tasks_list' %}">open tasks</a>
+<div class = 'container'>
 
-{% else %}
-<p>Login With Google</p>
-{% include "socialaccount/snippets/provider_list.html" with process="login" %}
-{% endif %}
+    {% if user.is_authenticated %}
+        <p>Welcome, You are logged in as {{ user.username }}</p>
+        <a class="btn btn-primary" href="{% url 'tasks:tasks_list' %}">open tasks</a>
+        <a class="btn btn-danger" href="{% url 'logout' %}">logout</a>
+        
 
-    
+    {% else %}
+        <h5>Login to create tasks with google accounts </h5>
+        <p>All tasks will be syncing in real time</p>
+        <p>Note: google allow to login only to those gmail addresses which are registered by developer to their api</p>
+        <p>I have to manually add your gmail to my api to make it work</p>
+        <p>Login With Google</p>
+
+        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    {% endif %}
+
+</div>
 
 {% endblock %}
 

@@ -17,6 +17,9 @@
         {% endfor %}
     <br>
     <a class="btn btn-primary" href="{% url 'tasks:create_task' %}">create new</a>
+    <a class="btn btn-primary" href="{% url 'index' %}">home</a>
+    <a class="btn btn-danger" href="{% url 'logout' %}">logout</a>
+
 </div>
 
 {% endblock %}
