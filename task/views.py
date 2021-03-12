@@ -22,7 +22,9 @@ def index(request):
 
 
 def tasks_list(request):
-    tasks = Task.objects.all()
+    # tasks = Task.objects.all()
+    # tasks = {}
+    tasks = Task.objects.filter(user=request.user)
     return render(request, 'task/tasks_list.html', {'tasks': tasks})
 
 
