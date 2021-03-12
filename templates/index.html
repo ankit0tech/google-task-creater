@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>My Google OAuth Project </h1>
+{% if user.is_authenticated %}
+<p>Welcome, You are logged in as {{ user.username }}</p>
+<a class="btn btn-primary" href="{% url 'tasks:tasks_list' %}">open tasks</a>
+
+{% else %}
+<p>Login With Google</p>
+{% include "socialaccount/snippets/provider_list.html" with process="login" %}
+{% endif %}
+
+    
+
+{% endblock %}
+

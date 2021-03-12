@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input class="form-control" name="title" type="text" value="{{title}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="text">Text:</label>
+            <input class="form-control" name="text" type="textarea" value="{{text}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="start_date">Start Date:</label>
+            <input class="form-control" type="datetime-local" name="start_date" required>
+        </div>
+
+
+        <input class="btn btn-primary" type="submit" value="Save">
+
+    </form>
+</div>
+{% endblock %}
