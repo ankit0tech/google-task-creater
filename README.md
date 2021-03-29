@@ -22,4 +22,4 @@ https://task-google-api.herokuapp.com/
  
  django-allauth
  
- 
+ There is requirements.txt file in repo that shows all the dependecies required for the project.
